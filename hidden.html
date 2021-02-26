@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>hidden html</title>
+ </head>
+<body>
+
+<h2>Guess The String</h2>
+
+<form>
+    <label for="form1_secret">Enter the secret word </label>
+    <input type ="text" id="secret_word" name="secret_word" value="Secret" min=10 max=50 step=2 value=30> <br>
+
+    <label for="form1_guess">Enter a guess</label>
+    <input type ="text" id="guess" name="guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+<label for="form1_correctCount">Correct Count: </label>
+<p id="correct-result">This text will be replaced</p>
+
+<label for="form1_wrongCount">Wrong Count: </label>
+<p id="wrong-result">This text will be replaced</p>
+
+<script> 
+var correct =0
+var wrong=0
+
+function processGuess()
+{
+    console.log("Getting form values")
+    secret = document.getElementById("secret_word").value
+    guess = document.getElementById("guess").value
+  
+    if(secret==guess)
+    {
+        correct++
+        alert("Congratualtions!");
+        document.getElementById("correct-result").innerHTML = correct;
+    }
+     else
+     {
+        wrong++
+        alert("Sorry!");
+        document.getElementById("wrong-result").innerHTML = wrong;
+     }
+    
+       
+   
+}
+
+</script>
+
+</body>
+</html> 
