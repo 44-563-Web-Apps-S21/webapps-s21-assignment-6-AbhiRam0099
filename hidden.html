@@ -2,6 +2,7 @@
 <html>
  <head>
      <title>hidden html</title>
+     <link rel="stylesheet" href="style.css">
  </head>
 <body>
 
@@ -23,7 +24,50 @@
 <label for="form1_wrongCount">Wrong Count: </label>
 <p id="wrong-result">This text will be replaced</p>
 
-<script> 
+
+<div id="container">
+
+
+<img id="myPlant" src="images/acacia.jpg" alt="connection error" width="200" height="200" onclick="rotateImage()">
+
+</div>
+
+<script>
+
+
+var currentImage = 0;
+    function rotateImage(){
+        switch(currentImage){
+            case 0: 
+                currentImage=currentImage+1;
+                document.getElementById("myPlant").src = "images/magnolia.jpg"
+                break;
+            case 1:
+                currentImage+=1;
+                document.getElementById("myPlant").src = "images/vaccinium.jpg"
+                break;
+            case 2:
+                currentImage+=1;
+                document.getElementById("myPlant").src = "images\/acacia.jpg"
+                break;
+            default:
+                currentImage = 0
+                document.getElementById("myPlant").src = "images/acacia.jpg"
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 var correct =0
 var wrong=0
 
@@ -45,10 +89,10 @@ function processGuess()
         alert("Sorry!");
         document.getElementById("wrong-result").innerHTML = wrong;
      }
-    
-       
-   
+ 
 }
+
+
 
 </script>
 
