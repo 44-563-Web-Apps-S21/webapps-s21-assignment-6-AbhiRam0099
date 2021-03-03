@@ -18,6 +18,17 @@
 
 <p id="result">This text will be replaced </p>
 
+<form>
+    <label for="form1_secret">Enter a property </label>
+    <input type ="text" id="prop" name="secret_word" value=color> <br>
+
+    <label for="form1_guess">Enter a value</label>
+    <input type ="text" id="val" name="guess" > <br>
+
+    <input type="button" onclick="updatebear()" value="Update the bear"> 
+</form>
+<p id="result2">This text will be replaced </p>
+
 <script> 
 var my_bear={ };
 function startbear(){
@@ -47,9 +58,15 @@ function startbear(){
     }  
     document.getElementById("result").innerHTML="hat:"+my_bear.hat +'\n'+
     "scarf:"+my_bear.scarf+"\r\n"+
-    "shirt:"+my_bear.shirt
-    ;
+    "shirt:"+my_bear.shirt;
 }
+function updatebear(){
+        var prop = document.getElementById("prop").value;
+        var val = document.getElementById("val").value;
+        my_bear[prop] = val;        
+        result2.innerHTML = "my_bear[]=  " + JSON.stringify(my_bear);
+
+    }
 </script>
 
 </body>
