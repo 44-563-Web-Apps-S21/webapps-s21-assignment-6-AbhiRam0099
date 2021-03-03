@@ -16,7 +16,7 @@
 </form>
 
 
-<p id="result">This text will be replaced </p>
+
 
 <form>
     <input type="radio" id="plus" onclick="processRadio()" value="plus"   
@@ -34,9 +34,11 @@
     <input type="radio" id="divide" onclick="processRadio()"   
        value="divide">
     <label for="rg1_green">/</></br>
-
+        <input type="button" value="Start a bear" onclick="startbear()">
   </form>
-  <p id="result2">This text will be replaced </p>
+
+  <p id="result">This text will be replaced </p>
+
 
 <script> 
 function permutations() {
@@ -52,7 +54,7 @@ function permutations() {
 function processRadio(){
     let first = document.getElementById("first").value;
     let second = document.getElementById("second").value;
-    let plus=document.getElementById("plus").checked;
+    let plus=document.getElementById("plus");
     let minus=document.getElementById("minus").checked;
     let multiply=document.getElementById("multiply").checked;
     let divide=document.getElementById("divide").checked;

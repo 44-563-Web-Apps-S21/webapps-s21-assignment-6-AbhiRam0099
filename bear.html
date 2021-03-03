@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+
+<h2>Abhilash Ramavaram builds a bear</h2>
+
+<form>
+    <input type="checkbox" id="hat" name="scales" value="hat" >
+  <label for="scales">hat</label>
+  <input type="checkbox" id="scarf" name="scales" value="scarf"  >
+  <label for="scales">Scarf</label>
+  <input type="checkbox" id="shirt" name="scales"  value="shirt" >
+  <label for="scales">shirt</label>
+  <input type="button" value="Start a bear" onclick="startbear()">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+var my_bear={ };
+function startbear(){
+    if(document.getElementById("hat").checked){
+        my_bear.hat=true;
+        
+    }
+    else{
+        my_bear.hat=false;
+    }
+   
+
+    if(document.getElementById("scarf").checked){
+        my_bear.scarf=true;   
+    }
+    else{
+        my_bear.scarf=false;  
+    }
+   
+
+    if(document.getElementById("shirt").checked){
+        my_bear.shirt=true;
+       
+    }
+    else{
+        my_bear.shirt=false;
+    }  
+    document.getElementById("result").innerHTML="hat:"+my_bear.hat +'\n'+
+    "scarf:"+my_bear.scarf+"\r\n"+
+    "shirt:"+my_bear.shirt
+    ;
+}
+</script>
+
+</body>
+</html> 
